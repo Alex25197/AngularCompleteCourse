@@ -34,6 +34,10 @@ export class RecipeService {
           //Se pone slice para que lo que retorne, sea una copia de la propiedad guardada en el servicio, no el mismo arreglo
           return this.recipes.slice();
       }
+      
+      getRecipe(index: number){
+        return this.recipes[index];
+      }
 
       addIngredientsToShoppingList(ingredients: Ingredient[]){
         this.slService.addIngredients(ingredients);
