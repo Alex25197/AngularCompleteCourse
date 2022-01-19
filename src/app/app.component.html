@@ -2,9 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      
-      <app-recipe-book *ngIf="currentNav === 'recipe'"></app-recipe-book>
-      <app-shopping-list *ngIf="currentNav === 'shopping-list'"></app-shopping-list>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

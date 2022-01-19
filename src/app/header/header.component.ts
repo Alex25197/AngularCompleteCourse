@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
     selector: 'app-header',
@@ -6,10 +6,5 @@ import { Component, EventEmitter, Output } from "@angular/core";
 })
 export class HeaderComponent {
 
-    @Output() switcher = new EventEmitter<string>();
-
-    onSelect(value){
-        this.switcher.emit(value);
-    }
 
 }
