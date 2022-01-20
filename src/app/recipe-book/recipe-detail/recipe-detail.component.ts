@@ -18,8 +18,9 @@ export class RecipeDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    //Me suscribo a los parametros de la ruta activa y dependiendo del id, cambio currentRecipe
     this.route.params.subscribe((params: Params) => {
-      this.id = +params['id'];
+      this.id = +params['id']; //parseo a number
       this.currentRecipe = this.recipeService.getRecipe(this.id);
     });
   }
