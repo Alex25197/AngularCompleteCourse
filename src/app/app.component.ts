@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentNav: string = 'recipe';
   title = 'shoppingList';
 
-  switchComponent(event){
-    this.currentNav = event;
-  }
 }
