@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
+import { AuthGuard } from './auth/auth.guard';
 import { RecipeBookComponent } from './recipe-book/recipe-book.component';
 import { RecipeDetailComponent } from './recipe-book/recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipe-book/recipe-edit/recipe-edit.component';
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   {
     path: 'recipes',
     component: RecipeBookComponent,
+    canActivate: [AuthGuard],
     children: [
       //El orden en que se declaran las rutas es muy importante ya que primero debe cargar las que estan hardcoded(new) y luego las
       //de parametros dinamicos
